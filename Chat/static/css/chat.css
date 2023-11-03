@@ -1,0 +1,204 @@
+.textimage{
+  width: 100%;
+  height: auto;
+}
+.datetime{
+  padding-top: 2%;
+  font-size: 1.5vh;
+}
+.textvideo{
+  width: 100%;
+  height: auto;
+}
+.message_holder{
+    grid-area: msgholder;
+    border: 1px gray solid;
+    border-radius: 5px;
+    padding: 2%;
+    overflow: auto;
+    color: #1d2022;
+
+}
+.messageentry{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 80%;
+  font-size: 3vh;
+  border-radius: 5px;
+  border: 1px gray solid;
+  height: 5vh;
+}
+label{
+  padding: 0.2%;
+  position: relative;
+  top: 100%;
+  background-color: #1d2022;
+  width: fit-content;
+  border-radius: 5px;
+  border: 1px gray solid;
+  display: inline-flex;
+  text-align: center;
+  font-size: 3vh;
+  color: lavender;
+  font-weight: 600;
+
+}
+.send{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 5.5vh;
+  position: relative;
+  width: 10%;
+  bottom: 2%;
+  font-size: 3vh;
+  background-color: #1d2022;
+  color: lavender;
+  font-weight: 600;
+  border: 1px gray solid;
+  border-radius: 5px;
+
+}
+.fileinput{
+  display: none;
+  padding: 5px;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px gray solid;
+}
+.formbar{
+  position: relative;
+  grid-area: msgform;
+  background-color: lavender;
+  padding: 1.5%;
+  border-radius: 5px;
+}
+.grid-container {
+    display: grid;
+    width:99%;
+    height:99%;
+    grid-template-columns: auto auto;
+    grid-template-rows: 81% 19%;
+    grid-template-areas:
+      'msgholder msgholder msgholder msgholder msgholder msgholder'
+      "msgform msgform msgform msgform msgform msgform";
+
+    grid-gap: 10px;
+    padding: 10px;
+  }
+.messagebox1{
+  padding: 0.8%;
+  width: 30%;
+  background-color: lavender;
+  border-radius: 5px;
+  word-wrap: break-word;
+  font-size: 2.5vh;
+  text-align: left;
+
+}
+.messagebox{
+  text-align: right;
+  position: relative;
+  padding: 0.8%;
+  width: 30%;
+  left: 70%;
+  border-radius: 5px;
+  word-wrap: break-word;
+  font-size: 2.5vh;
+  color: lavender;
+  background-color: #1d2022;
+
+}
+  html, body {
+    height: 98%;
+    background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+@media (orientation: portrait){
+  .grid-container {
+    display: grid;
+    width:99%;
+    height:99%;
+    grid-template-columns: auto auto;
+    grid-template-rows: 82% 18%;
+    grid-template-areas:
+      'msgholder msgholder msgholder msgholder msgholder msgholder'
+      "msgform msgform msgform msgform msgform msgform";
+
+    grid-gap: 10px;
+    padding: 10px;
+  }
+  label{
+    padding: 0.3%;
+    position: relative;
+    top: 100%;
+    width: fit-content;
+    border-radius: 10px;
+    -webkit-appearance:none;    
+    border: 1px gray solid;
+    display: inline-flex;
+    text-align: center;
+    font-size: 3vh;
+    color: lavender;
+    background-color: #1d2022;
+    font-weight: 600;
+  }
+  .messageentry{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 60%;
+    font-size: 3vh;
+    border-radius: 10px;
+    -webkit-appearance:none;
+    border: 1px gray solid;
+    height: 5vh;
+  }
+  .send{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 5.5vh;
+    position: relative;
+    width: 30%;
+    bottom: 2%;
+    font-size: 3vh;
+    border: 1px gray solid;
+    border-radius: 10px;
+    -webkit-appearance:none;
+    color: lavender;
+    font-weight: 600;
+    background-color: #1d2022;
+  }
+  .messagebox1{
+    text-align: left;
+    padding: 2.8%;
+    width: 80%;
+    background-color: lavender;
+    border-radius: 10px;
+    -webkit-appearance:none;
+    word-wrap: break-word;
+    font-size: 3vh
+  }
+  .messagebox{
+    text-align: right;
+    background-color: lavender;
+    position: relative;
+    padding: 2.8%;
+    width: 80%;
+    left: 20%;
+    border-radius: 10px;
+    -webkit-appearance:none;
+    word-wrap: break-word;
+    font-size: 3vh;
+    right: 0%;
+    color: lavender;
+    background-color: #1d2022;
+
+  }
+  .textimage{
+    width: 100%;
+    height: auto;
+  }
+  .textvideo{
+    width: 100%;
+    height: auto;
+  }
+  .datetime{
+    padding: 2%;
+    font-size: 1.8vh;
+  }
+}

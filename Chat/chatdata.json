@@ -1,0 +1,5 @@
+{
+ "chatid1":[["person1"],["person2"],["person3"]],
+ "chatid2":[["person2"],["person3"]],
+ "chatid3":[["person3"],["person1"]]
+}

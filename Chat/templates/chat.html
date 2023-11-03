@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js"></script>
+    <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/chat.css') }}">
+  </head>
+  <body>
+    <div class="grid-container">
+
+    <div class="message_holder"></div>
+    <script>
+      renderhistory({{datetimes|safe}},{{people|safe}},{{text|safe}},{{mediadata|safe}})
+    </script>
+    <form action="" method="POST" class="formbar">
+      <input type="text" id = "messageentry" class="messageentry" placeholder="Messages"/>
+      <input type="submit" id = "submit" class="send" value="Send &#62;"/>
+      <input type="file" id="fileinput"  class = "fileinput" onchange="rendermedia()"/>
+      <br><br>
+      <div>
+      <label id = "filecover" class =”label” for="fileinput" >Choose file</label>
+      <br>
+      </div>
+    </form>
+</div>
+  </body>
+  </html>

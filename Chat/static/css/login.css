@@ -1,0 +1,106 @@
+.grid{
+    display: grid;
+    place-items: center;
+    width:99%;
+    height:99%;
+}
+
+.loginbutton {
+    padding: 3%;
+    border-radius: 5px;
+    text-align: center;
+    width: 40%;
+    position: relative;
+    left: 60%;
+    font-size: 4vh;
+    border: black 2px;
+    background-color: #1d2022;;
+    color: white;
+
+}
+.loginentry{
+    border-radius: 5px;
+    position: relative;
+    width: 80%;
+    left: 10%;
+    font-size: 3.1vh;
+    border: grey 2px;
+}
+.formcard{
+    background-color: lavender;
+    width: fit-content;
+    height:fit-content;
+    padding: 3%;
+    padding-left: 8%;
+    padding-right: 8%;
+    border-radius: 5px;
+}
+label{
+    position: relative;
+    left: 10%;
+    font-size: 3.1vh;
+    font-weight: 500;
+
+}
+.title{
+    font-size: 8vh;
+    text-align: center;
+    font-weight: 700;
+}
+html, body {
+    height: 98%; 
+    background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #1d2022;
+}
+@media (orientation: portrait){
+    .formcard{
+        background-color: lavender;
+        width: fit-content;
+        height:fit-content;
+        padding: 3%;
+        padding-left: 8%;
+        padding-right: 8%;
+        border-radius: 5px;
+        visibility: hidden;
+    }
+    .loginbutton {
+        padding: 3%;
+        border-radius: 5px;
+        text-align: center;
+        width: 40%;
+        position: relative;
+        left: 60%;
+        font-size: 4vh;
+        border: black 2px;
+        background-color: #1d2022;;
+        color: white;
+        visibility: visible;
+        -webkit-appearance:none;
+
+    
+    }
+    .loginentry{
+        border-radius: 5px;
+        position: relative;
+        width: 80%;
+        left: 10%;
+        font-size: 3.1vh;
+        border: grey 2px;
+        visibility: visible;
+
+    }
+    label{
+        position: relative;
+        left: 10%;
+        font-size: 3.1vh;
+        visibility: visible;
+        font-weight: 500;
+    }
+    .title{
+        font-size: 8vh;
+        text-align: center;
+        font-weight: 700;
+        visibility: visible;
+    }
+}

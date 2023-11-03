@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+    </head>
+    <body>
+        <div class="grid">
+            <div class="formcard">
+                <form method="POST">
+                    <p class = "title">Chat App<p>
+                    <label for="usrnm">Username</label>
+                    <br>
+                    <input type="text" id = "usrnm" name="usrnm" class="loginentry">
+                    <br>
+                    <br>
+                    <label for="password">Password</label>
+                    <br>
+                    <input type="text" id = "password" name="password" class="loginentry">
+                    <br>
+                    <br>
+                    <input type="submit" id = "submit" class="loginbutton" value="Login >" >
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

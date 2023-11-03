@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://kit.fontawesome.com/4f306bff55.js" crossorigin="anonymous"></script>
+            <script>
+            function getParameterByName(name, url) {
+                if (!url) url = window.location.href;
+                name = name.replace(/[\[\]]/g, '\\$&');
+                var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                    results = regex.exec(url);
+                if (!results) return null;
+                if (!results[2]) return '';
+                return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+            function makeid() {
+                var text = "";
+                var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+                for (var i = 0; i < 5; i++)
+                    text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+                return text;
+}
+            function makelink(name){
+                document.getElementById("contancts").appendChild(document.body.appendChild(document.createElement('br')));  
+                var div = document.createElement('div');
+                divid = makeid(4)
+                div.id = divid
+                div.className = "chatlinkcont"
+                var a = document.createElement('a');  
+                var link = document.createTextNode(name+" >"); 
+                a.appendChild(link)
+                a.href = "/chat?usrnm="+ getParameterByName("usrnm")+"&chatid="+name;
+                a.className = "chatlink";
+                document.getElementById("contancts").appendChild(div);
+                document.getElementById(divid).appendChild(a);  
+
+            }
+        </script>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/lobby.css') }}">
+    </head>
+    <body>
+        <div class="megaflex">
+            <div class="sidebar">
+                <div class="controls">
+                    <a id = "proflink" class="lobbylink">
+                        <i class="far fa-user "></i>
+                    </a>
+                    <p id = "usrnm" class="controltext"></p>
+                    <br>
+                    <a id = "Settings" class="lobbylink">
+                        <i class="fas fa-cog"></i>
+                    </a>
+                    <p id = "usrnm" class="controltext">Settings</p>
+                    <br>
+                    <a id = "addnew" class="lobbylink">
+                        <i class="fas fa-user-plus"></i>
+                    </a>
+                    <p id = "usrnm" class="controltext">Add Contacts</p>
+
+                </div>
+
+                <div class="contacts" id = "contancts">
+                    <div class="contactsheader">
+                        Contacts     
+                    </div>
+                    {%for i in contacts%}
+                        <script>makelink("{{i}}")</script>
+                    {%endfor%}
+                </div>
+            </div>
+            <div class="meat" id = "meat">
+                <div>
+                    <p class="meatitle" id = "meatitle"></p>
+                </div>
+            </div>
+        </div>
+        <script>
+            document.getElementById("meatitle").innerHTML = "Welcome "+getParameterByName("usrnm");
+            document.getElementById("addnew").href = "/settings?usrnm="+getParameterByName("usrnm");             
+            document.getElementById("proflink").href = "/settings?usrnm="+getParameterByName("usrnm");            
+            document.getElementById("Settings").href = "/proflink?usrnm="+getParameterByName("usrnm");            
+            document.getElementById("usrnm").innerHTML = getParameterByName("usrnm");
+            </script>
+    </body> 
+</html>

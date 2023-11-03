@@ -1,0 +1,5 @@
+{
+    "person1":["chatid1","chatid3"],
+    "person2":["chatid2","chatid1"],
+    "person3":["chatid2","chatid3"]
+}
